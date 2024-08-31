@@ -13,3 +13,6 @@ def adaptive_move(key, energy):
         return make_large_move(key)
     else:
         return make_small_move(key)
+
+def high_energy_threshold():
+    return 1000  # Örnek olarak bir eşik değeri

@@ -4,17 +4,17 @@ def energy_function(key):
     return 0.5 * prefix_energy + 0.5 * suffix_energy  # Example weights
 
 def calculate_prefix_energy(key):
-    # Compute how close the key's hash is to the desired prefix
-    return prefix_distance(key)
+    # Placeholder function, returns a fixed value for demonstration
+    return 1.0  # Sabit bir değer döndürüyoruz
 
 def calculate_suffix_energy(key):
-    # Compute how close the key's hash is to the desired suffix
-    return suffix_distance(key)
+    # Placeholder function, returns a fixed value for demonstration
+    return 1.0  # Sabit bir değer döndürüyoruz
 
 def prefix_distance(key):
     # Implement the actual prefix comparison here
-    pass
+    return 0  # Şu an için sıfır dönüyor, uygulamada bu fonksiyon güncellenmeli
 
 def suffix_distance(key):
     # Implement the actual suffix comparison here
-    pass
+    return 0  # Şu an için sıfır dönüyor, uygulamada bu fonksiyon güncellenmeli

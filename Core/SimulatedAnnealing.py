@@ -13,7 +13,7 @@ class SimulatedAnnealing:
         stagnation_counter = 0
 
         for iteration in range(max_iterations):
-            new_key = self.move_function(self.key)
+            new_key = self.move_function(self.key, self.current_energy)
             new_energy = self.energy_function(new_key)
             energy_diff = new_energy - self.current_energy
 
@@ -26,10 +26,15 @@ class SimulatedAnnealing:
 
             temp = self.temp_schedule.update_temperature(temp, energy_diff, stagnation_counter)
             
-            # Optionally, checkpointing or logging can be done here
-            
             if stagnation_counter > self.temp_schedule.stagnation_threshold():
                 break
 
     def acceptance_probability(self, energy_diff, temperature):
-        return random.expovariate(energy_diff / temperature)
+        if temperature <= 0 or energy_diff == 0:
+            return 0
+        lambd = energy_diff / max(temperature, 1e-10)
+        
+        if lambd <= 0:
+            return 0  # Doğrudan reddediyoruz (yani kabul olasılığı sıfır)
+        
+        return random.expovariate(lambd)
