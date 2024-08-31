@@ -1,0 +1,8 @@
+{
+    "starting_key": "0x2000000000000000",
+    "max_iterations": 10000,
+    "initial_temperature": 1000,
+    "checkpoint_interval": 1000,
+    "high_energy_threshold": 1000,
+    "significant_energy_drop": 50
+}
