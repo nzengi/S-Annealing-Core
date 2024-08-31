@@ -1,3 +1,4 @@
-'''bash
-python3 Main/Main.py --config config.json
-'''
+
+```bash
+  python3 Main/Main.py --config config.json
+```
