@@ -1,0 +1,16 @@
+# Multiprocessing for parallel execution
+multiprocessing-logging
+
+# Logging for logging utility
+logging
+
+# hashlib for cryptographic functions
+hashlib
+
+# Argparse for command-line argument parsing (usually comes with Python standard library)
+argparse
+
+# JSON for configuration (usually comes with Python standard library)
+json
+
+# You can add other relevant libraries if used
