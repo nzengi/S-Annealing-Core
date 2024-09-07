@@ -9,7 +9,7 @@ from Configuration.Config import Config
 def main():
     config = Config()
 
-    starting_key = int(config.get('starting_key', 0x2000000000000000), 16)
+    starting_key = int(config.get('starting_key', 0x7ffffffffffffffff), 16)
     max_iterations = config.get('max_iterations', 10000)
     initial_temperature = config.get('initial_temperature', 1000)  # INITIAL_TEMPERATURE yerine config'den alınan değer
 
